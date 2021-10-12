@@ -1,5 +1,6 @@
 from typing import List
 import requests
+import pprint
 
 BASE_URL = "https://statsapi.web.nhl.com/api/v1"
 
@@ -58,5 +59,5 @@ if __name__ == "__main__":
         print(get_team_roster(team["id"]))
         print("\n\n\n")
     '''
-
-    print(get_player_stats_for_season(8476459, 2020))
+    pprint.pprint(get_player_stats_for_season(8476459, 2019))
+    pprint.pprint(get_player_stats_for_season(8476459, 2020))
