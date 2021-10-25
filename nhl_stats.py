@@ -121,11 +121,12 @@ if __name__ == "__main__":
     pprint.pprint(get_player_info(8476459))
     
     print("\n\n")
-    pprint.pprint(get_player_stats_for_season(8476459, 2020))
-
+    pprint.pprint(get_player_stats_for_season(8476459, 2020)[0]['splits'][0]['stat'])
+'''
     print("\n\Schedule info:")
     pprint.pprint(get_game_schedule_between_dates_for_team_id(
         30, "2018-01-02", "2018-01-02"))
 
     print("\n\nGame info:")
     pprint.pprint(get_game_info(2017020608))
+'''
