@@ -16,6 +16,18 @@ def main():
             team_stats = game_data['liveData']['boxscore']['teams']
             home_stats = team_stats['home']['teamStats']['teamSkaterStats']
             away_stats = team_stats['away']['teamStats']['teamSkaterStats']
+            
+            home_keys = list(home_stats.keys())
+            away_keys = list(away_stats.keys())
+            
+            for hkey, akey in zip(home_keys, away_keys):
+                new_hkey = "home_" + hkey
+                new_akey = "away_" + akey
+                home_stats[new_hkey] = home_stats[hkey]
+                away_stats[new_akey] = away_stats[akey]
+                del home_stats[hkey]
+                del away_stats[akey]
+            
             combined_team_stats = {**home_stats, **away_stats}
             game_stats.append(combined_team_stats)
     
