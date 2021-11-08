@@ -91,12 +91,12 @@ func get_game_stats_and_save_to_disk(url string) error {
 		return err
 	}
 
-	gameInfo, err := models.UnmarshalGameInfo(body)
+	gameInfo, _ := models.UnmarshalGameInfo(body)
 	file, err := json.MarshalIndent(gameInfo, "", " ")
 	if err != nil {
 		return err
 	}
-	gamePk := strconv.Itoa(int(gameInfo.GamePk))
+	gamePk := strconv.Itoa(int(gameInfo.GamePk)) // gamePk is unique gameId
 	fileStr := "gamedata/" + gamePk + ".json"
 	fmt.Println(fileStr)
 	err = ioutil.WriteFile(fileStr, file, 0644)
