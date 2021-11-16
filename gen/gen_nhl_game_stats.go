@@ -9,11 +9,13 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/oscjaimes/nhl-over-under/models"
+	models "github.com/oscjaimes/nhl-over-under/data-models"
 )
 
 func main() {
-	seasons := []string{"20142015", "20152016", "20162017", "20172018", "20182019", "20192020", "20202021"}
+	seasons := []string{"20002001", "20012002", "20032004", "20042005", "20062007", "20082009", "20092010",
+		"20102011", "20112012", "20122013", "20132013", "20142015", "20152016", "20162017",
+		"20172018", "20182019", "20192020", "20202021"}
 	var schedules []models.SeasonSchedule
 
 	// For each season, get the schedule
