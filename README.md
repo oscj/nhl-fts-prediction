@@ -31,15 +31,60 @@ go run gen gen_nhl_game_stats.go
 ```
 
 ### Model Implementations
+
+#### Setup
+
+For this project, 16 features and 1 target were chosen:
+```py
+[   'away_blocked',
+    'away_faceOffWinPercentage',
+    'away_giveaways',
+    'away_hits',
+    'away_pim',
+    'away_powerPlayPercentage',
+    'away_shots',
+    'away_takeaways',
+    'home_blocked',
+    'home_faceOffWinPercentage',
+    'home_giveaways',
+    'home_hits',
+    'home_pim',
+    'home_powerPlayPercentage',
+    'home_shots',
+    'home_takeaways',
+    'totalGoals'
+]
+```
+
+Where totalGoals is the target variable and all others are features. Each feature represents the given statistic for a particular game. 
+
+If we can also predict (or guess) these features from historical trends (i.e past 10 games), then we can use those results to feed into this model.
+
+Data was collected and parsed using the NHL API with some go and python scripts and exported to __csv/game_stats.csv__. This csv file contains ~15,000 valid data points of game data for specified features and target above.
+
+#### Model Approaches
 1. [Closed Form Linear Regression](#closed-form-linear-regression)
 2. [Gradient Descent Linear Regression ](#gradient-descent-linear-regression)
 3. [Linear Classification](#linear-classification)
 4. [Neural Network](#neural-network)
 
 #### Closed Form Linear Regression
+
+The closed form implementation can be found in __expl/closed_form_lr.ipynb__.
+
+##### Structure & Limitation of Closed Form Linear Regression
+// todo
+##### Interpretation & Results
 // todo
 
 #### Gradient Descent Linear Regression
+
+The gradient descent optimization approach for linear regression was implemented in __expl/grad_des_lr.ipynb__.
+
+#### Structure & Limitation of Gradient DescentLinear Regression
+// todo
+
+##### Interpretation & Results
 // todo
 
 #### Linear Classification
