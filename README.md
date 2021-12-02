@@ -5,8 +5,9 @@
 2. [Data Generation](#data-generation)
 3. [Model Implementations](#model-implementations)
 4. [Results](#results)
-5. [Future Considerations](#future-considerations)
-6. [Resources](#resources)
+5. [Results Based on Historical Sports Betting Data](#results-based-on-historical-sports-betting-data)
+6. [Future Considerations](#future-considerations)
+7. [Resources](#resources)
 
 ### Project Background and Context
 
@@ -96,8 +97,10 @@ The gradient descent optimization approach for linear regression was implemented
 ### Future Considerations
 // todo
 
-### Project Results
+### Results
 // todo
+
+### Results Based on Historical Sports Betting Data
 
 ### Resources
 // todo
