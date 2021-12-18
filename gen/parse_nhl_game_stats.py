@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+parse_nhl_game_stats.py
+-----------------------
+Script to parse all NHL game data CSVs in the /gamedata directory and save to a singular csv file.
+"""
 import os
 import json
 import pandas as pd
