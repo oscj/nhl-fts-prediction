@@ -15,6 +15,8 @@ def main():
     
     game_stats = []
     
+    
+    
     for file in tqdm(gd_files):
         with open(gd_path + file, 'r') as f:
             game_data = json.load(f)
